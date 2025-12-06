@@ -643,3 +643,146 @@ a:focus {
 .contact-form .button:focus {
   background: #165a9a;
 }
+
+/* =========================
+   STRÁNKA REZERVACE
+   ========================= */
+
+.booking-form fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  padding: var(--space-m) var(--space-l);
+  margin-bottom: var(--space-l);
+}
+
+.booking-form legend {
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  padding: 0 var(--space-s);
+}
+
+.booking-form .form-group {
+  margin-bottom: var(--space-m);
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="date"],
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: var(--space-s) var(--space-m);
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  background-color: #fff;
+}
+
+.booking-form input[type="text"]:focus,
+.booking-form input[type="email"]:focus,
+.booking-form input[type="tel"]:focus,
+.booking-form input[type="date"]:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+
+/* MŘÍŽKA PRO VÝBĚR ČASU */
+.time-slot-container p {
+  font-weight: 600;
+  margin-bottom: var(--space-s);
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  gap: var(--space-s);
+}
+
+.time-slot input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.time-slot label {
+  display: block;
+  padding: var(--space-s);
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.time-slot label:hover {
+  background-color: #f0f0f0;
+  border-color: var(--color-accent);
+}
+
+.time-slot input[type="radio"]:focus + label {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+
+.time-slot input[type="radio"]:checked + label {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* SOUHLAS A TLAČÍTKO */
+.form-consent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+}
+
+.form-consent label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.booking-form .button {
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  background: var(--color-accent);
+  color: #ffffff;
+  padding: var(--space-s) var(--space-l);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.booking-form .button:hover,
+.booking-form .button:focus {
+  background: #165a9a;
+}
+
+@media (min-width: 40rem) {
+  .booking-form .button {
+    width: auto;
+  }
+}
+

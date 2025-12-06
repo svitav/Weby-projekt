@@ -73,10 +73,10 @@
 
       <form action="#" method="post" class="booking-form">
         <fieldset>
-          <legend>Osobní údaje pacienta</legend>
+          <legend>1. Osobní údaje pacienta</legend>
           <div class="form-group">
             <label for="booking-name">Jméno a příjmení</label>
-            <input type="text" id="booking-name" name="name" required>
+            <input type="text" id="booking-name" name="name" required placeholder="Jan Novák">
           </div>
           <div class="form-group">
             <label for="booking-birthdate">Datum narození</label>
@@ -84,19 +84,19 @@
           </div>
           <div class="form-group">
             <label for="booking-phone">Telefonní číslo</label>
-            <input type="tel" id="booking-phone" name="phone" required>
+            <input type="tel" id="booking-phone" name="phone" required placeholder="+420 123 456 789">
           </div>
           <div class="form-group">
             <label for="booking-email">E-mail</label>
-            <input type="email" id="booking-email" name="email" required>
+            <input type="email" id="booking-email" name="email" required placeholder="jan.novak@email.cz">
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>Požadované vyšetření</legend>
+          <legend>2. Požadované vyšetření</legend>
           <div class="form-group">
             <label for="booking-department">Oddělení</label>
-            <select id="booking-department" name="department">
+            <select id="booking-department" name="department" required>
               <option value="">-- Vyberte oddělení --</option>
               <option value="kardiologie">Kardiologie</option>
               <option value="dermatologie">Dermatologie</option>
@@ -115,9 +115,58 @@
               <option value="horova">MUDr. Eva Horová</option>
             </select>
           </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Výběr termínu a času</legend>
           <div class="form-group">
-            <label for="booking-notes">Poznámka (důvod návštěvy, požadovaný termín)</label>
-            <textarea id="booking-notes" name="notes" rows="5"></textarea>
+            <label for="booking-date">Zvolte datum</label>
+            <input type="date" id="booking-date" name="date" required>
+          </div>
+          <div class="time-slot-container">
+            <p>Dostupné časy:</p>
+            <div class="time-slots">
+              <div class="time-slot">
+                <input type="radio" id="time-0800" name="booking-time" value="08:00">
+                <label for="time-0800">08:00</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-0830" name="booking-time" value="08:30">
+                <label for="time-0830">08:30</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-0900" name="booking-time" value="09:00">
+                <label for="time-0900">09:00</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-1000" name="booking-time" value="10:00">
+                <label for="time-1000">10:00</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-1030" name="booking-time" value="10:30">
+                <label for="time-1030">10:30</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-1100" name="booking-time" value="11:00">
+                <label for="time-1100">11:00</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-1300" name="booking-time" value="13:00">
+                <label for="time-1300">13:00</label>
+              </div>
+              <div class="time-slot">
+                <input type="radio" id="time-1430" name="booking-time" value="14:30">
+                <label for="time-1430">14:30</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Doplňující informace</legend>
+          <div class="form-group">
+            <label for="booking-notes">Poznámka (důvod návštěvy, atd.)</label>
+            <textarea id="booking-notes" name="notes" rows="4"></textarea>
           </div>
         </fieldset>
 

@@ -238,7 +238,7 @@ a:focus {
    MAIN – GRID PRO HOMEPAGE
    ========================= */
 
-#main {
+#main-homepage {
   max-width: 72rem;
   margin: 0 auto;
   padding: var(--space-m) var(--space-m) var(--space-l);
@@ -432,7 +432,7 @@ a:focus {
      řádek 2:  news (2 sloupce) | events (2 sloupce)
      řádek 3+: malé karty v mřížce
   */
-  #main {
+  #main-homepage {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     text-align: left;
   }
@@ -462,4 +462,107 @@ a:focus {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+
+/* =========================
+   STRÁNKA SEZNAM (Lékaři, Oddělení, atd.)
+   ========================= */
+
+.main-content-area {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-m) var(--space-m) var(--space-l);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-l);
+}
+
+.page-header h1 {
+  margin-top: 0;
+  margin-bottom: var(--space-s);
+}
+
+.page-header p {
+  font-size: var(--font-size-l);
+  color: var(--color-breadcrumb-text);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* GRID PRO KARTY (LÉKAŘI) */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-l);
+}
+
+.doctor-card {
+  background: var(--color-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.doctor-card:hover,
+.doctor-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.doctor-card-content {
+  padding: var(--space-m);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.doctor-card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-l);
+}
+
+.doctor-card .specialization {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: var(--space-s);
+}
+
+.doctor-card p {
+  font-size: var(--font-size-s);
+  line-height: 1.5;
+  margin-bottom: var(--space-m);
+}
+
+.doctor-card .card-link {
+  margin-top: auto;
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  align-self: flex-start;
+  background: var(--color-accent);
+  color: #ffffff;
+  padding: var(--space-s) var(--space-m);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.doctor-card .card-link:hover,
+.doctor-card .card-link:focus {
+  background: #165a9a;
+  text-decoration: none;
 }

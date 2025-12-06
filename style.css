@@ -1,0 +1,459 @@
+/* =========================
+   ZÁKLADNÍ NASTAVENÍ + PROMĚNNÉ
+   ========================= */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+
+  --color-header-bg: #0b2840;
+  --color-header-text: #ffffff;
+
+  --color-footer-bg: #111111;
+  --color-footer-text: #f5f5f5;
+
+  --color-breadcrumb-bg: #f5f7fa;
+  --color-breadcrumb-text: #555555;
+
+  --color-accent: #1f7acb;
+
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+
+  --font-size-s: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-l: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Wrapper – drží footer dole */
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER (GRID)
+   ========================= */
+
+/* MOBILE:
+   logo vlevo, search uprostřed, dropdown vpravo
+   => "logo search menu"
+*/
+
+#navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "logo search menu";
+  align-items: center;
+  gap: var(--space-s);
+  padding: var(--space-s) var(--space-m);
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+}
+
+/* LOGO */
+.logo {
+  grid-area: logo;
+  margin: 0;
+  text-align: left;
+  font-size: var(--font-size-l);
+}
+
+.logo a {
+  color: var(--color-header-text);
+  text-decoration: none;
+}
+
+/* MOBILE MENU TOGGLE (burger) */
+.menu-toggle {
+  grid-area: menu;
+  position: relative;
+  justify-self: end;
+}
+
+.header-icon {
+  list-style: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: var(--space-xs) var(--space-s);
+  font-size: 1.25rem;
+  color: var(--color-header-text);
+}
+
+/* schovat defaultní trojúhelník u summary */
+.header-icon::-webkit-details-marker {
+  display: none;
+}
+
+/* MOBILNÍ MENU UVNITŘ <details> */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--space-xs);
+  background: #163552;
+  padding: var(--space-s) var(--space-m);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  min-width: 12rem;
+  z-index: 20;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu li + li {
+  margin-top: var(--space-xs);
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  font-size: var(--font-size-s);
+}
+
+/* DESKTOP MENU – mobile first = skryté */
+#main-menu-desktop {
+  display: none;
+}
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+/* mobile: uprostřed v headeru */
+#search-bar {
+  grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+#search-bar input[type="search"] {
+  font-size: var(--font-size-s);
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #3a6185;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  color: #000000;
+  width: clamp(110px, 18vw, 240px);
+}
+
+#search-bar button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: var(--space-xs);
+  font-size: 1.1rem;
+  color: var(--color-header-text);
+}
+
+#search-bar button:hover,
+#search-bar button:focus {
+  opacity: 0.8;
+}
+
+/* =========================
+   BREADCRUMBS
+   ========================= */
+
+#breadcrumb {
+  background: var(--color-breadcrumb-bg);
+  font-size: var(--font-size-s);
+  padding: var(--space-xs) var(--space-m);
+}
+
+#breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+#breadcrumb li {
+  color: var(--color-breadcrumb-text);
+}
+
+/* oddělovač mezi položkami */
+#breadcrumb li + li::before {
+  content: "›";
+  margin: 0 var(--space-xs);
+}
+
+/* aktuální stránka */
+#breadcrumb a[aria-current="page"] {
+  font-weight: 600;
+}
+
+/* =========================
+   MAIN – GRID PRO HOMEPAGE
+   ========================= */
+
+#main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-m) var(--space-m) var(--space-l);
+  display: grid;
+  grid-template-columns: 1fr;      /* mobile: vše pod sebou */
+  gap: var(--space-m);
+  text-align: center;              /* mobile – zarovnání na střed */
+}
+
+.home-panel {
+  padding: var(--space-m);
+  border-radius: 0.5rem;
+  background: #f7fafc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.home-panel-highlight {
+  background: #e3f2fd;
+}
+
+.home-panel h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-s);
+}
+
+.home-panel h3 {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-base);
+}
+
+.home-panel p {
+  margin: 0;
+  font-size: var(--font-size-s);
+}
+
+/* ===== GRID BUBLIN PRO NEPŘÍTOMNÉ LÉKAŘE ===== */
+
+.absence-grid {
+  margin-top: var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--space-m);
+}
+
+.absence-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: var(--space-m);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.absence-card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-base);
+}
+
+.absence-card time {
+  font-size: var(--font-size-s);
+  color: var(--color-breadcrumb-text);
+}
+
+/* články v Aktuálně / Události */
+.home-panel article + article {
+  margin-top: var(--space-m);
+}
+
+.home-panel time {
+  display: block;
+  font-size: var(--font-size-s);
+  color: var(--color-breadcrumb-text);
+  margin-bottom: var(--space-xs);
+}
+
+/* odkazy v malých kartách */
+.home-panel-link .panel-link {
+  display: inline-block;
+  margin-top: var(--space-s);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+#footer {
+  margin-top: auto;
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: var(--space-m) var(--space-m);
+}
+
+.footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  font-size: var(--font-size-s);
+}
+
+#footer a {
+  color: var(--color-footer-text);
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+/* =========================
+   COPYRIGHT STRIP
+   ========================= */
+
+.copyright-section {
+  background: #000000;
+  color: #dddddd;
+  padding: var(--space-s) var(--space-m);
+  font-size: var(--font-size-s);
+}
+
+.copyright-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+.copyright-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.legal-link {
+  color: #dddddd;
+}
+
+/* =========================
+   DESKTOP BREAKPOINT (≈1200px)
+   ========================= */
+
+@media (min-width: 75rem) {
+  /* HEADER: logo | (mezera) | search | nav */
+  #navigation {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . search nav";
+    column-gap: var(--space-l);
+  }
+
+  /* schovat mobilní menu, zobrazit desktopové */
+  .menu-toggle {
+    display: none;
+  }
+
+  #main-menu-desktop {
+    display: block;
+    grid-area: nav;
+    justify-self: end;
+  }
+
+  #main-menu-desktop ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--space-m);
+    font-size: var(--font-size-s);
+  }
+
+  #main-menu-desktop a {
+    color: var(--color-header-text);
+  }
+
+  /* search jde vpravo, ale PŘED menu */
+  #search-bar {
+    grid-area: search;
+    justify-content: flex-end;
+  }
+
+  /* MAIN GRID – desktop:
+     řádek 1:  absence přes 4 sloupce
+     řádek 2:  news (2 sloupce) | events (2 sloupce)
+     řádek 3+: malé karty v mřížce
+  */
+  #main {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    text-align: left;
+  }
+
+  #absence-panel {
+    grid-column: 1 / -1;          /* zabírá všechny 4 sloupce */
+  }
+
+  #news-panel {
+    grid-column: 1 / 3;           /* 2 sloupce */
+  }
+
+  #events-panel {
+    grid-column: 3 / 5;           /* 2 sloupce */
+  }
+
+  /* footer vedle sebe */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* copyright v jednom řádku */
+  .copyright-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

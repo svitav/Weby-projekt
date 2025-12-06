@@ -1,0 +1,260 @@
+<!DOCTYPE html> 
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poliklinika Corpo – Úvod</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="wrapper">
+
+  <!-- ===== HEADER ===== -->
+  <header id="navigation">
+
+    <!-- MOBILE MENU (burger) -->
+    <details class="menu-toggle">
+      <summary class="header-icon" aria-label="Otevřít hlavní menu">☰</summary>
+      <nav class="mobile-menu" aria-label="Hlavní navigace – mobil">
+        <ul>
+          <li><a href="o-nas.html">O nás</a></li>
+          <li><a href="vysetreni.html">Vyšetření</a></li>
+          <li><a href="oddeleni.html">Oddělení</a></li>
+          <li><a href="lekari.html">Lékaři</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </details>
+
+    <!-- LOGO -->
+    <h1 class="logo">
+      <a href="index.html"><span>Poliklinika Corpo</span></a>
+    </h1>
+
+    <!-- DESKTOP MENU -->
+    <nav id="main-menu-desktop" aria-label="Hlavní navigace">
+      <ul>
+        <li><a href="o-nas.html">O nás</a></li>
+        <li><a href="vysetreni.html">Vyšetření</a></li>
+        <li><a href="oddeleni.html">Oddělení</a></li>
+        <li><a href="lekari.html">Lékaři</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- SEARCH BAR -->
+    <form id="search-bar" action="hledani.html" method="get" role="search">
+      <label for="search-input" class="visually-hidden">Vyhledávání</label>
+      <input id="search-input" type="search" name="q" placeholder="Hledat..." required>
+      <button type="submit" aria-label="Vyhledat">
+        🔍
+      </button>
+    </form>
+
+  </header>
+
+  <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
+  <nav id="breadcrumb" aria-label="Drobečková navigace">
+    <ol>
+      <li><a href="index.html" aria-current="page">Úvod</a></li>
+    </ol>
+  </nav>
+
+  <!-- ===== HLAVNÍ OBSAH – GRID ===== -->
+  <main id="main">
+    <!-- 1) Nepřítomní lékaři – velký panel + vlastní grid bublin -->
+    <section id="absence-panel" class="home-panel home-panel-highlight">
+      <h2>Nepřítomní lékaři</h2>
+      <p>
+        Přehled plánované nepřítomnosti lékařů Polikliniky CORPO. Informace slouží k lepšímu
+        plánování vašich návštěv.
+      </p>
+
+      <div class="absence-grid" aria-label="Seznam nepřítomných lékařů">
+        <article class="absence-card">
+          <h3>MUDr. Jana Nováková</h3>
+          <p>
+            <time datetime="2025-05-12">12.–16. 5. 2025</time><br>
+            Důvod: dovolená
+          </p>
+        </article>
+
+        <article class="absence-card">
+          <h3>MUDr. Petr Svoboda</h3>
+          <p>
+            <time datetime="2025-05-20">20. 5. 2025</time><br>
+            Důvod: odborné školení
+          </p>
+        </article>
+
+        <article class="absence-card">
+          <h3>MUDr. Eva Horová</h3>
+          <p>
+            <time datetime="2025-05-27">27. 5. 2025</time><br>
+            Důvod: služební cesta
+          </p>
+        </article>
+
+        <article class="absence-card">
+          <h3>MUDr. Tomáš Král</h3>
+          <p>
+            <time datetime="2025-06-03">3.–4. 6. 2025</time><br>
+            Důvod: účast na konferenci
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2) Aktuálně -->
+    <section id="news-panel" class="home-panel">
+      <h2>Aktuálně</h2>
+
+      <article>
+        <time datetime="2025-12-12">12. 12. 2025</time>
+        <h3>Otevření nové interní ambulance CORPO</h3>
+        <p>
+          Poliklinika CORPO spustila provoz nové interní ambulance zaměřené na diagnostiku a léčbu
+          chronických onemocnění. Pacienti se mohou objednávat již nyní.
+        </p>
+      </article>
+
+      <article>
+        <time datetime="2025-12-03">3. 12. 2025</time>
+        <h3>Modernizace odběrového centra</h3>
+        <p>
+          Odběrové centrum prošlo rozsáhlou rekonstrukcí, která přinesla rychlejší odbavování
+          pacientů a větší komfort během čekání. Provoz není nijak omezen.
+        </p>
+      </article>
+
+      <article>
+        <time datetime="2025-11-20">20. 11. 2025</time>
+        <h3>Nový ultrazvukový systém pro přesnější diagnostiku</h3>
+        <p>
+          Oddělení radiologie získalo moderní ultrazvukový přístroj umožňující detailnější
+          zobrazování. Vyšetření je díky němu rychlejší i přesnější.
+        </p>
+      </article>
+    </section>
+
+    <!-- 3) Události -->
+    <section id="events-panel" class="home-panel">
+      <h2>Události</h2>
+
+      <article>
+        <time datetime="2026-01-15">15. 1. 2026</time>
+        <h3>Zimní seminář prevence civilizačních chorob</h3>
+        <p>
+          Lékaři CORPO povedou odborný seminář určený veřejnosti. Tématem bude prevence diabetu,
+          hypertenze a dalších civilizačních onemocnění.
+        </p>
+      </article>
+
+      <article>
+        <time datetime="2025-12-08">8. 12. 2025</time>
+        <h3>Kurz první pomoci pro veřejnost</h3>
+        <p>
+          Poliklinika CORPO pořádá interaktivní kurz první pomoci. Účastníci si vyzkouší
+          resuscitaci, práci s AED i postupy při úrazech.
+        </p>
+      </article>
+
+      <article>
+        <time datetime="2025-11-30">30. 11. 2025</time>
+        <h3>Přednáška „Zdravá záda v praxi“</h3>
+        <p>
+          Fyzioterapeuti CORPO připravili přednášku a praktické ukázky cviků, které pomáhají
+          předcházet bolestem zad. Akce je zdarma po registraci.
+        </p>
+      </article>
+    </section>
+
+    <!-- 4) Pro pacienty -->
+    <section id="patients-panel" class="home-panel home-panel-link">
+      <h2>Pro pacienty</h2>
+      <p>
+        Praktické informace o průběhu návštěvy, přípravě na vyšetření a možnostech preventivních
+        prohlídek.
+      </p>
+      <a href="vysetreni.html" class="panel-link">Seznam vyšetření</a>
+    </section>
+
+    <!-- 5) Oddělení -->
+    <section id="departments-panel" class="home-panel home-panel-link">
+      <h2>Oddělení</h2>
+      <p>
+        Přehled odborných ambulancí, diagnostických pracovišť a specializovaných center
+        Polikliniky CORPO.
+      </p>
+      <a href="oddeleni.html" class="panel-link">Přehled oddělení</a>
+    </section>
+
+    <!-- 6) Rezervace -->
+    <section id="reservation-panel" class="home-panel home-panel-link">
+      <h2>Rezervace vyšetření</h2>
+      <p>
+        Online formulář pro objednání termínu vyšetření nebo konzultace.
+      </p>
+      <a href="rezervace.html" class="panel-link">Rezervovat termín</a>
+    </section>
+
+    <!-- 7) Praktické informace -->
+    <section id="info-panel" class="home-panel home-panel-link">
+      <h2>Praktické informace</h2>
+      <p>
+        Ordinační hodiny, platby, dostupnost lékáren a základní dokumenty pro pacienty.
+      </p>
+      <a href="prakticke-informace.html" class="panel-link">Zobrazit informace</a>
+    </section>
+
+    <!-- 8) Časté dotazy -->
+    <section id="faq-panel" class="home-panel home-panel-link">
+      <h2>Časté dotazy</h2>
+      <p>
+        Nejčastější otázky pacientů a stručné odpovědi na jednom místě.
+      </p>
+      <a href="faq.html" class="panel-link">Přejít na FAQ</a>
+    </section>
+  </main>
+
+  <!-- ===== PATIČKA ===== -->
+  <footer id="footer">
+    <section class="footer-inner">
+      <p>
+        <strong>Poliklinika Corpo</strong><br>
+        <strong>Ulice:</strong> Javorová 1286/14, Praha 10<br>
+        <strong>IČO:</strong> 28491237<br>
+        <strong>Tel:</strong>
+        <a href="tel:+420734852196">+420 734 852 196</a><br>
+        <strong>E-mail:</strong>
+        <a href="mailto:recepce@poliklinikacorpo.cz">
+          recepce@poliklinikacorpo.cz
+        </a>
+      </p>
+
+      <p>
+        <strong>Studentský projekt</strong><br>
+        Všechny texty a ilustrace byly vytvořeny pomocí AI.<br>
+        Autoři: Šulc František, Netušil David, Vít Hom
+      </p>
+    </section>
+  </footer>
+
+  <!-- ===== SEKCE POD PATIČKOU (COPYRIGHT) ===== -->
+  <section class="copyright-section">
+    <div class="copyright-container">
+      <p class="copyright-text">
+        <time datetime="2025">©2025</time> Poliklinika Corpo, všechna práva vyhrazena.
+      </p>
+
+      <nav class="copyright-nav">
+        <a href="ochrana-osobnich-udaju.html" class="legal-link">Ochrana osobních údajů</a>
+        <a href="podminky-uzivani.html" class="legal-link">Podmínky užívání</a>
+      </nav>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

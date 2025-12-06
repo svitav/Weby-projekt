@@ -68,7 +68,53 @@
       <h1>Kontakt</h1>
     </header>
 
-    <p>Kontaktní informace budou doplněny.</p>
+    <section class="contact-info-section">
+      <div class="contact-details">
+        <h2>Kontaktní údaje</h2>
+        <p>
+          <strong>Adresa:</strong><br>
+          Poliklinika Corpo<br>
+          Javorová 1286/14<br>
+          100 00 Praha 10
+        </p>
+        <p>
+          <strong>Recepce a objednání:</strong><br>
+          Tel: <a href="tel:+420734852196">+420 734 852 196</a><br>
+          E-mail: <a href="mailto:recepce@poliklinikacorpo.cz">recepce@poliklinikacorpo.cz</a>
+        </p>
+        <p>
+          <strong>Provozní doba:</strong><br>
+          Pondělí–Pátek: 7:00–19:00<br>
+          Sobota–Neděle: Zavřeno
+        </p>
+      </div>
+      <div class="contact-map">
+        <h2>Kde nás najdete</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.994898120192!2d14.4908553157169!3d50.04919597942199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b93906a2a1661%3A0x71c10c67c5def53a!2sJavorov%C3%A1%201286%2F14%2C%20100%2000%20Praha%2010-Zahradn%C3%AD%20M%C4%9Bsto!5e0!3m2!1scs!2scz!4v1678886400000!5m2!1scs!2scz"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Mapa s polohou Polikliniky Corpo"></iframe>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <h2>Napište nám</h2>
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Vaše jméno</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Váš e-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Vaše zpráva</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="button">Odeslat zprávu</button>
+      </form>
+    </section>
 
   </main>
 

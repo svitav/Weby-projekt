@@ -68,7 +68,67 @@
       <h1>Rezervace</h1>
     </header>
 
-    <p>Rezervační formulář bude doplněn.</p>
+    <section class="booking-form-section">
+      <p>Vyplňte prosím níže uvedený formulář pro odeslání nezávazné žádosti o termín vyšetření. Po odeslání formuláře Vás bude kontaktovat naše recepce pro potvrzení a upřesnění termínu.</p>
+
+      <form action="#" method="post" class="booking-form">
+        <fieldset>
+          <legend>Osobní údaje pacienta</legend>
+          <div class="form-group">
+            <label for="booking-name">Jméno a příjmení</label>
+            <input type="text" id="booking-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="booking-birthdate">Datum narození</label>
+            <input type="date" id="booking-birthdate" name="birthdate" required>
+          </div>
+          <div class="form-group">
+            <label for="booking-phone">Telefonní číslo</label>
+            <input type="tel" id="booking-phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="booking-email">E-mail</label>
+            <input type="email" id="booking-email" name="email" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Požadované vyšetření</legend>
+          <div class="form-group">
+            <label for="booking-department">Oddělení</label>
+            <select id="booking-department" name="department">
+              <option value="">-- Vyberte oddělení --</option>
+              <option value="kardiologie">Kardiologie</option>
+              <option value="dermatologie">Dermatologie</option>
+              <option value="pediatrie">Pediatrie</option>
+              <option value="ortopedie">Ortopedie</option>
+              <option value="gynekologie">Gynekologie</option>
+              <option value="neurologie">Neurologie</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="booking-doctor">Preferovaný lékař (nepovinné)</label>
+            <select id="booking-doctor" name="doctor">
+              <option value="">-- Bez preference --</option>
+              <option value="novakova">MUDr. Jana Nováková</option>
+              <option value="svoboda">MUDr. Petr Svoboda</option>
+              <option value="horova">MUDr. Eva Horová</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="booking-notes">Poznámka (důvod návštěvy, požadovaný termín)</label>
+            <textarea id="booking-notes" name="notes" rows="5"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">Souhlasím se zpracováním osobních údajů pro účely rezervace termínu.</label>
+        </div>
+
+        <button type="submit" class="button">Odeslat žádost o termín</button>
+      </form>
+    </section>
 
   </main>
 

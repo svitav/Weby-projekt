@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poliklinika Corpo – Oddělení</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Poliklinika Corpo – Kontakt</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <!-- LOGO -->
     <h1 class="logo">
-      <a href="index.html"><span>Poliklinika Corpo</span></a>
+      <a href="../index.html"><span>Poliklinika Corpo</span></a>
     </h1>
 
     <!-- DESKTOP MENU -->
@@ -57,54 +57,67 @@
   <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
   <nav id="breadcrumb" aria-label="Drobečková navigace">
     <ol>
-      <li><a href="index.html">Úvod</a></li>
-      <li><a href="oddeleni.html" aria-current="page">Oddělení</a></li>
+      <li><a href="../index.html">Úvod</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
     </ol>
   </nav>
 
   <!-- ===== HLAVNÍ OBSAH ===== -->
   <main class="main-content-area">
     <header class="page-header">
-      <h1>Oddělení</h1>
+      <h1>Kontakt</h1>
     </header>
 
-        <p>Naše poliklinika sdružuje řadu specializovaných oddělení a ambulancí, které pokrývají široké spektrum lékařských oborů.</p>
+    <section class="contact-info-section">
+      <div class="contact-details">
+        <h2>Kontaktní údaje</h2>
+        <p>
+          <strong>Adresa:</strong><br>
+          Poliklinika Corpo<br>
+          Javorová 1286/14<br>
+          100 00 Praha 10
+        </p>
+        <p>
+          <strong>Recepce a objednání:</strong><br>
+          Tel: <a href="tel:+420734852196">+420 734 852 196</a><br>
+          E-mail: <a href="mailto:recepce@poliklinikacorpo.cz">recepce@poliklinikacorpo.cz</a>
+        </p>
+        <p>
+          <strong>Provozní doba:</strong><br>
+          Pondělí–Pátek: 7:00–19:00<br>
+          Sobota–Neděle: Zavřeno
+        </p>
+      </div>
+      <div class="contact-map">
+        <h2>Kde nás najdete</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.375084616853!2d14.4754954044426!3d50.13541465435452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beb64bb1af519%3A0x3ee74bd1c57a931e!2sJavorov%C3%A1%20970%2F14%2C%20182%2000%20Praha%208-Kobylisy!5e0!3m2!1sen!2scz!4v1765042640171!5m2!1sen!2scz"
+	        title="Mapa s polohou Polikliniky Corpo"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
 
-    <section class="doctors-grid" aria-labelledby="department-heading">
-      <h2 id="department-heading" class="visually-hidden">Seznam oddělení</h2>
-
-      <article class="doctor-card">
-        <div class="doctor-card-content">
-          <h3>Kardiologie</h3>
-          <p>Zaměřujeme se na prevenci, diagnostiku a léčbu onemocnění srdce a cév, včetně vysokého krevního tlaku, ischemické choroby srdeční a poruch srdečního rytmu.</p>
-          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+    <section class="contact-form-section">
+      <h2>Napište nám</h2>
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Vaše jméno</label>
+          <input type="text" id="name" name="name" required>
         </div>
-      </article>
-
-      <article class="doctor-card">
-        <div class="doctor-card-content">
-          <h3>Dermatologie</h3>
-          <p>Poskytujeme péči v oblasti všeobecné i estetické dermatologie. Řešíme kožní onemocnění, znaménka, akné a nabízíme preventivní vyšetření kůže.</p>
-          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        <div class="form-group">
+          <label for="email">Váš e-mail</label>
+          <input type="email" id="email" name="email" required>
         </div>
-      </article>
-
-      <article class="doctor-card">
-        <div class="doctor-card-content">
-          <h3>Pediatrie</h3>
-          <p>Zajišťujeme komplexní péči o děti od narození do 19 let, včetně preventivních prohlídek, očkování a léčby běžných dětských onemocnění.</p>
-          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        <div class="form-group">
+          <label for="message">Vaše zpráva</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-      </article>
-
-      <article class="doctor-card">
-        <div class="doctor-card-content">
-          <h3>Ortopedie</h3>
-          <p>Specializujeme se na diagnostiku a léčbu onemocnění a úrazů pohybového aparátu. Nabízíme moderní léčebné postupy pro dospělé i dětské pacienty.</p>
-          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
-        </div>
-      </article>
-
+        <button type="submit" class="button">Odeslat zprávu</button>
+      </form>
     </section>
 
   </main>

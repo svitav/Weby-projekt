@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poliklinika Corpo – Podmínky užívání</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Poliklinika Corpo – Oddělení</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <!-- LOGO -->
     <h1 class="logo">
-      <a href="index.html"><span>Poliklinika Corpo</span></a>
+      <a href="../index.html"><span>Poliklinika Corpo</span></a>
     </h1>
 
     <!-- DESKTOP MENU -->
@@ -57,36 +57,54 @@
   <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
   <nav id="breadcrumb" aria-label="Drobečková navigace">
     <ol>
-      <li><a href="index.html">Úvod</a></li>
-      <li><a href="podminky-uzivani.html" aria-current="page">Podmínky užívání</a></li>
+      <li><a href="../index.html">Úvod</a></li>
+      <li><a href="oddeleni.html" aria-current="page">Oddělení</a></li>
     </ol>
   </nav>
 
   <!-- ===== HLAVNÍ OBSAH ===== -->
   <main class="main-content-area">
     <header class="page-header">
-      <h1>Podmínky užívání</h1>
+      <h1>Oddělení</h1>
     </header>
 
-    <section class="legal-text">
-      <h2>1. Úvodní ustanovení</h2>
-      <p>Tyto podmínky užívání (dále jen „podmínky“) upravují práva a povinnosti osob využívajících webové stránky www.poliklinikacorpo.cz (dále jen „uživatelé“) a provozovatele těchto stránek, Polikliniky Corpo, IČO: 28491237 (dále jen „provozovatel“).</p>
+        <p>Naše poliklinika sdružuje řadu specializovaných oddělení a ambulancí, které pokrývají široké spektrum lékařských oborů.</p>
 
-      <h2>2. Obsah webových stránek</h2>
-      <p>Veškeré informace uvedené na těchto webových stránkách mají pouze informativní charakter. Přestože provozovatel vynakládá maximální úsilí k zajištění jejich správnosti a aktuálnosti, neručí za jejich úplnost a přesnost. Informace zde uvedené nenahrazují odbornou lékařskou péči, diagnostiku ani konzultaci.</p>
+    <section class="doctors-grid" aria-labelledby="department-heading">
+      <h2 id="department-heading" class="visually-hidden">Seznam oddělení</h2>
 
-      <h2>3. Autorská práva</h2>
-      <p>Obsah těchto webových stránek, včetně textů, grafiky, loga a designu, je chráněn autorským právem. Jakékoliv šíření, kopírování nebo jiné užití obsahu nebo jeho částí bez předchozího písemného souhlasu provozovatele je zakázáno.</p>
+      <article class="doctor-card">
+        <div class="doctor-card-content">
+          <h3>Kardiologie</h3>
+          <p>Zaměřujeme se na prevenci, diagnostiku a léčbu onemocnění srdce a cév, včetně vysokého krevního tlaku, ischemické choroby srdeční a poruch srdečního rytmu.</p>
+          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        </div>
+      </article>
 
-      <h2>4. Ochrana osobních údajů</h2>
-      <p>Zásady zpracování a ochrany osobních údajů jsou upraveny v samostatném dokumentu <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>.</p>
+      <article class="doctor-card">
+        <div class="doctor-card-content">
+          <h3>Dermatologie</h3>
+          <p>Poskytujeme péči v oblasti všeobecné i estetické dermatologie. Řešíme kožní onemocnění, znaménka, akné a nabízíme preventivní vyšetření kůže.</p>
+          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        </div>
+      </article>
 
-      <h2>5. Odkazy na jiné stránky</h2>
-      <p>Webové stránky mohou obsahovat odkazy na stránky třetích stran. Provozovatel nenese žádnou odpovědnost za obsah, bezpečnost ani funkčnost těchto stránek.</p>
+      <article class="doctor-card">
+        <div class="doctor-card-content">
+          <h3>Pediatrie</h3>
+          <p>Zajišťujeme komplexní péči o děti od narození do 19 let, včetně preventivních prohlídek, očkování a léčby běžných dětských onemocnění.</p>
+          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        </div>
+      </article>
 
-      <h2>6. Závěrečná ustanovení</h2>
-      <p>Provozovatel si vyhrazuje právo tyto podmínky kdykoliv změnit nebo aktualizovat. Uživatel je povinen se seznámit s aktuálním zněním podmínek. Používáním těchto webových stránek uživatel vyjadřuje svůj souhlas s těmito podmínkami.</p>
-      <p>Tyto podmínky jsou platné a účinné od <time datetime="2025-12-01">1. 12. 2025</time>.</p>
+      <article class="doctor-card">
+        <div class="doctor-card-content">
+          <h3>Ortopedie</h3>
+          <p>Specializujeme se na diagnostiku a léčbu onemocnění a úrazů pohybového aparátu. Nabízíme moderní léčebné postupy pro dospělé i dětské pacienty.</p>
+          <a href="oddeleni-detail.html" class="card-link">Více informací</a>
+        </div>
+      </article>
+
     </section>
 
   </main>

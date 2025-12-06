@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poliklinika Corpo – Praktické informace</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Poliklinika Corpo – Detail lékaře</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <!-- LOGO -->
     <h1 class="logo">
-      <a href="index.html"><span>Poliklinika Corpo</span></a>
+      <a href="../index.html"><span>Poliklinika Corpo</span></a>
     </h1>
 
     <!-- DESKTOP MENU -->
@@ -57,75 +57,81 @@
   <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
   <nav id="breadcrumb" aria-label="Drobečková navigace">
     <ol>
-      <li><a href="index.html">Úvod</a></li>
-      <li><a href="prakticke-informace.html" aria-current="page">Praktické informace</a></li>
+      <li><a href="../index.html">Úvod</a></li>
+      <li><a href="lekari.html">Lékaři</a></li>
+      <li><a href="lekar-detail.html" aria-current="page">MUDr. Panam Palmer</a></li>
     </ol>
   </nav>
 
   <!-- ===== HLAVNÍ OBSAH ===== -->
   <main class="main-content-area">
     <header class="page-header">
-      <h1>Praktické informace</h1>
+      <h1>MUDr. Panam Palmer</h1>
+      <p>Kardiologie</p>
     </header>
 
-    <section class="info-section" aria-labelledby="info-heading-1">
-      <h2 id="info-heading-1">Co si vzít s sebou</h2>
-      <ul>
-        <li>Platný průkaz totožnosti (občanský průkaz, pas).</li>
-        <li>Kartičku vaší zdravotní pojišťovny.</li>
-        <li>Doporučení od praktického nebo jiného odborného lékaře (pokud jej máte).</li>
-        <li>Výsledky předchozích vyšetření a lékařské zprávy.</li>
-        <li>Seznam léků, které pravidelně užíváte.</li>
-        <li>Brýle nebo naslouchátko, pokud je používáte.</li>
-      </ul>
-    </section>
+    <article class="doctor-detail">
+      <div class="doctor-detail-header">
+        <img src="https://placehold.co/300x300/E3F2FD/0B2840?text=MUDr.+Panam%0APalmer" alt="Portrét MUDr. Panam Palmer" class="doctor-photo">
+        <div class="doctor-intro">
+          <h2>MUDr. Panam Palmer</h2>
+          <p class="specialization">Hlavní lékařka oddělení Kardiologie</p>
+          <a href="rezervace.html" class="button">Rezervovat termín</a>
+        </div>
+      </div>
 
-    <section class="info-section" aria-labelledby="info-heading-2">
-      <h2 id="info-heading-2">Smluvní pojišťovny</h2>
-      <p>Naše poliklinika má uzavřené smlouvy s následujícími zdravotními pojišťovnami:</p>
-      <ul class="insurance-list">
-        <li>Všeobecná zdravotní pojišťovna (111)</li>
-        <li>Vojenská zdravotní pojišťovna (201)</li>
-        <li>Česká průmyslová zdravotní pojišťovna (205)</li>
-        <li>Oborová zdravotní pojišťovna (207)</li>
-        <li>Zaměstnanecká pojišťovna Škoda (209)</li>
-        <li>Zdravotní pojišťovna ministerstva vnitra (211)</li>
-        <li>Revírní bratrská pokladna (213)</li>
-      </ul>
-      <p>Pokud jste pojištěncem jiné pojišťovny, budete pravděpodobně muset péči uhradit v hotovosti. Doporučujeme ověřit si podmínky u vaší pojišťovny.</p>
-    </section>
+      <div class="doctor-detail-content">
+        <h3>Profesní zkušenosti</h3>
+        <p>MUDr. Panam Palmer je uznávanou odbornicí v oblasti kardiologie s více než 15 lety klinické praxe. Svou kariéru zahájila na I. interní klinice Všeobecné fakultní nemocnice v Praze, kde se specializovala na neinvazivní kardiologické metody. Od roku 2015 působí na naší poliklinice, kde vede tým kardiologického oddělení.</p>
 
-    <section class="info-section" aria-labelledby="info-heading-3">
-      <h2 id="info-heading-3">Ceník nehrazených služeb</h2>
-      <p>Některé výkony a služby nejsou hrazeny z veřejného zdravotního pojištění. Zde je orientační ceník:</p>
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Výkon</th>
-            <th>Cena</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Vstupní prohlídka pro řidičský průkaz</td>
-            <td>800 Kč</td>
-          </tr>
-          <tr>
-            <td>Vstupní prohlídka pro zbrojní průkaz</td>
-            <td>1 200 Kč</td>
-          </tr>
-          <tr>
-            <td>Výpis ze zdravotní dokumentace na žádost pacienta</td>
-            <td>300 Kč</td>
-          </tr>
-          <tr>
-            <td>Aplikace očkovací látky (cena bez vakcíny)</td>
-            <td>250 Kč</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>Kompletní ceník je k dispozici na recepci polikliniky.</p>
-    </section>
+        <h3>Vzdělání</h3>
+        <ul>
+          <li><strong>2008:</strong> Atestace v oboru Kardiologie, Institut postgraduálního vzdělávání ve zdravotnictví, Praha</li>
+          <li><strong>2004:</strong> Promoce na 1. lékařské fakultě Univerzity Karlovy v Praze</li>
+        </ul>
+
+        <h3>Specializace a odborné zájmy</h3>
+        <ul>
+          <li>Echokardiografie (ultrazvuk srdce)</li>
+          <li>Ischemická choroba srdeční</li>
+          <li>Srdeční selhání</li>
+          <li>Arteriální hypertenze</li>
+          <li>Prevence kardiovaskulárních onemocnění</li>
+        </ul>
+
+        <h3>Členství v odborných společnostech</h3>
+        <ul>
+          <li>Česká kardiologická společnost (ČKS)</li>
+          <li>Evropská kardiologická společnost (ESC)</li>
+        </ul>
+
+        <h3>Ordinační hodiny</h3>
+        <table class="office-hours">
+          <tbody>
+            <tr>
+              <th>Pondělí</th>
+              <td>8:00 - 15:00</td>
+            </tr>
+            <tr>
+              <th>Úterý</th>
+              <td>8:00 - 12:00 (pouze pro zvané)</td>
+            </tr>
+            <tr>
+              <th>Středa</th>
+              <td>9:00 - 16:00</td>
+            </tr>
+            <tr>
+              <th>Čtvrtek</th>
+              <td>---</td>
+            </tr>
+            <tr>
+              <th>Pátek</th>
+              <td>8:00 - 14:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
 
   </main>
 

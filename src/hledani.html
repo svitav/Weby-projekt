@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poliklinika Corpo – Kontakt</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Poliklinika Corpo – Výsledky hledání</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <!-- LOGO -->
     <h1 class="logo">
-      <a href="index.html"><span>Poliklinika Corpo</span></a>
+      <a href="../index.html"><span>Poliklinika Corpo</span></a>
     </h1>
 
     <!-- DESKTOP MENU -->
@@ -57,66 +57,38 @@
   <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
   <nav id="breadcrumb" aria-label="Drobečková navigace">
     <ol>
-      <li><a href="index.html">Úvod</a></li>
-      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      <li><a href="../index.html">Úvod</a></li>
+      <li><a href="hledani.html" aria-current="page">Výsledky hledání</a></li>
     </ol>
   </nav>
 
   <!-- ===== HLAVNÍ OBSAH ===== -->
   <main class="main-content-area">
     <header class="page-header">
-      <h1>Kontakt</h1>
+      <h1>Výsledky hledání</h1>
+      <p>Ukázka výsledků pro hledaný výraz.</p>
     </header>
 
-    <section class="contact-info-section">
-      <div class="contact-details">
-        <h2>Kontaktní údaje</h2>
-        <p>
-          <strong>Adresa:</strong><br>
-          Poliklinika Corpo<br>
-          Javorová 1286/14<br>
-          100 00 Praha 10
-        </p>
-        <p>
-          <strong>Recepce a objednání:</strong><br>
-          Tel: <a href="tel:+420734852196">+420 734 852 196</a><br>
-          E-mail: <a href="mailto:recepce@poliklinikacorpo.cz">recepce@poliklinikacorpo.cz</a>
-        </p>
-        <p>
-          <strong>Provozní doba:</strong><br>
-          Pondělí–Pátek: 7:00–19:00<br>
-          Sobota–Neděle: Zavřeno
-        </p>
-      </div>
-      <div class="contact-map">
-        <h2>Kde nás najdete</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.375084616853!2d14.4754954044426!3d50.13541465435452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beb64bb1af519%3A0x3ee74bd1c57a931e!2sJavorov%C3%A1%20970%2F14%2C%20182%2000%20Praha%208-Kobylisy!5e0!3m2!1sen!2scz!4v1765042640171!5m2!1sen!2scz"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
-      <h2>Napište nám</h2>
-      <form action="#" method="post" class="contact-form">
-        <div class="form-group">
-          <label for="name">Vaše jméno</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Váš e-mail</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Vaše zpráva</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="button">Odeslat zprávu</button>
-      </form>
+    <section class="search-results" aria-labelledby="search-results-heading">
+      <h2 id="search-results-heading" class="visually-hidden">Výsledky vyhledávání</h2>
+      <p>Byly nalezeny 3 výsledky pro hledaný výraz "kardiologie".</p>
+      <ul class="results-list">
+        <li>
+          <h3><a href="oddeleni-detail.html">Oddělení Kardiologie</a></h3>
+          <p>Naše kardiologické oddělení poskytuje komplexní péči o pacienty s onemocněním srdce a cév...</p>
+          <a href="oddeleni-detail.html" class="result-link">Přejít na stránku</a>
+        </li>
+        <li>
+          <h3><a href="lekar-detail.html">MUDr. Panam Palmer</a></h3>
+          <p>Specialistka na diagnostiku a léčbu srdečních onemocnění s více než 15 lety praxe v oboru kardiologie...</p>
+          <a href="lekar-detail.html" class="result-link">Zobrazit profil lékaře</a>
+        </li>
+        <li>
+          <h3><a href="vysetreni.html">EKG vyšetření</a></h3>
+          <p>Elektrokardiografie (EKG) je základní vyšetřovací metoda v kardiologii, která snímá elektrickou aktivitu srdce...</p>
+          <a href="vysetreni.html" class="result-link">Více o vyšetření</a>
+        </li>
+      </ul>
     </section>
 
   </main>

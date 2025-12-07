@@ -233,6 +233,23 @@ a:focus {
 #breadcrumb a[aria-current="page"] {
   font-weight: 600;
 }
+/* =========================
+   HERO OBRÁZEK
+   ========================= */
+
+.hero-image {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-m);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  display: block;
+}
 
 /* =========================
    MAIN – GRID PRO HOMEPAGE

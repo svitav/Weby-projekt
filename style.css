@@ -62,9 +62,9 @@ a:focus {
   overflow: hidden;
 }
 
-/* Wrapper – drží footer dole */
+/* Wrapper – obalení obsahu stránky */
 #wrapper {
-  min-height: 100vh;
+  min-height: 100vh;/*vh kvůli minimální výšce obrazovky*/
   display: flex;
   flex-direction: column;
 }
@@ -73,18 +73,13 @@ a:focus {
    HEADER (GRID)
    ========================= */
 
-/* MOBILE:
-   logo vlevo, search uprostřed, dropdown vpravo
-   => "logo search menu"
-*/
 
 #navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; /*fr pro rozdělení gridu volným místem*/
   grid-template-rows: 1fr 1fr ;
-  /*grid-template-areas: "logo search menu";*/
-  grid-template-areas: "logo . menu"
-                       "search search search";
+  grid-template-areas: "logo . menu" /*horní řádek logo, prázdné misté, menu*/
+                       "search search search";/*spodní řádek search po celé šířce*/
   align-items: center;
   gap: var(--space-s);
   padding: var(--space-s) var(--space-m);
@@ -112,7 +107,7 @@ a:focus {
   height: 40px;
 }
 
-/* MOBILE MENU TOGGLE (burger) */
+/* MOBILE MENU TOGGLE*/
 .menu-toggle {
   grid-area: menu;
   position: relative;
@@ -129,8 +124,8 @@ a:focus {
   color: var(--color-header-text);
 }
 
-/* schovat defaultní trojúhelník u summary */
-.header-icon::-webkit-details-marker {
+/* schovat symbol u summary */
+.header-icon::-webkit-details-marker {/*systémový prvek prohlížeče*/
   display: none;
 }
 
@@ -174,8 +169,8 @@ a:focus {
 
 /* mobile: uprostřed v headeru */
 #search-bar {
-  grid-area: search;
-  grid-column: 1 / -1;
+  grid-area: search;/*definováno v #navigation*/
+  grid-column: 1 / -1;/*1. až poslední sloupec*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,7 +196,7 @@ a:focus {
   font-size: 1.1rem;
   color: var(--color-header-text);
 }
-
+/*selectory myš a klávesnice (např tab)*/
 #search-bar button:hover,
 #search-bar button:focus {
   opacity: 0.8;
@@ -267,9 +262,9 @@ a:focus {
   margin: 0 auto;
   padding: var(--space-m) var(--space-m) var(--space-l);
   display: grid;
-  grid-template-columns: 1fr;      /* mobile: vše pod sebou */
+  grid-template-columns: 1fr;/* mobile: vše pod sebou */
   gap: var(--space-m);
-  text-align: center;              /* mobile – zarovnání na střed */
+  text-align: center;
 }
 
 .home-panel {
@@ -327,7 +322,7 @@ a:focus {
   color: var(--color-breadcrumb-text);
 }
 
-/* články v Aktuálně / Události */
+/* články v Aktuálně a události */
 .home-panel article {
   margin-top: var(--space-m);
 }
@@ -376,7 +371,7 @@ a:focus {
 }
 
 /* =========================
-   COPYRIGHT STRIP
+   COPYRIGHT SEKCE POD FOOTER
    ========================= */
 
 .copyright-section {
@@ -409,7 +404,7 @@ a:focus {
 }
 
 /* =========================
-   DESKTOP BREAKPOINT (≈1200px)
+   DESKTOP BREAKPOINT (+-1200px)
    ========================= */
 
 @media (min-width: 75rem) {
@@ -445,32 +440,28 @@ a:focus {
     color: var(--color-header-text);
   }
 
-  /* search jde vpravo, ale PŘED menu */
+  /* search jde vpravo PŘED menu */
   #search-bar {
     grid-area: search;
     justify-content: flex-end;
   }
 
-  /* MAIN GRID – desktop:
-     řádek 1:  absence přes 4 sloupce
-     řádek 2:  news (2 sloupce) | events (2 sloupce)
-     řádek 3+: malé karty v mřížce
-  */
+  /* MAIN GRID – desktop:  */
   #main-homepage {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     text-align: left;
   }
 
   #absence-panel {
-    grid-column: 1 / -1;          /* zabírá všechny 4 sloupce */
+    grid-column: 1 / -1;/* zabírá všechny 4 sloupce */
   }
 
   #news-panel {
-    grid-column: 1 / 3;           /* 2 sloupce */
+    grid-column: 1 / 3;/* 2 sloupce */
   }
 
   #events-panel {
-    grid-column: 3 / 5;           /* 2 sloupce */
+    grid-column: 3 / 5;/* 2 sloupce */
   }
 
   /* footer vedle sebe */
@@ -490,7 +481,7 @@ a:focus {
 
 
 /* =========================
-   STRÁNKA SEZNAM (Lékaři, Oddělení, atd.)
+   STRÁNKA SEZNAM (Lékaři, Oddělení, atd...)
    ========================= */
 
 .main-content-area {
@@ -622,14 +613,14 @@ a:focus {
 
 .contact-info-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;/*Možnost zalamování pod sebe*/
   gap: var(--space-l);
   margin-bottom: var(--space-l);
 }
-
+  /*====  MAPA  ====*/
 .contact-details,
 .contact-map {
-  flex: 1 1 25rem; /* flex-grow, flex-shrink, flex-basis */
+  flex: 1 1 25rem; /* flex-grow, flex-shrink, flex-basis o velikosti +-400px */
 }
 
 .contact-map h2{
@@ -830,9 +821,5 @@ a:focus {
   background: #165a9a;
 }
 
-@media (min-width: 40rem) {
-  .booking-form .button {
-    width: auto;
-  }
-}
+
 

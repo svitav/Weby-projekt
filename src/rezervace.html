@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,35 @@
 </head>
 
 <body>
-<div id="wrapper">
+  <div id="wrapper">
 
-  <!-- ===== HEADER ===== -->
-  <header id="navigation">
+    <!-- ===== HEADER ===== -->
+    <header id="navigation">
 
-    <!-- MOBILE MENU (burger) -->
-    <details class="menu-toggle">
-      <summary class="header-icon" aria-label="Otevřít hlavní menu">☰</summary>
-      <nav class="mobile-menu" aria-label="Hlavní navigace – mobil">
+      <!-- MOBILE MENU (burger) -->
+      <details class="menu-toggle">
+        <summary class="header-icon" aria-label="Otevřít hlavní menu">☰</summary>
+        <nav class="mobile-menu" aria-label="Hlavní navigace – mobil">
+          <ul>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="vysetreni.html">Vyšetření</a></li>
+            <li><a href="oddeleni.html">Oddělení</a></li>
+            <li><a href="lekari.html">Lékaři</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <!-- LOGO -->
+      <h1 class="logo">
+        <a href="../index.html">
+          <img src="img/logo.svg" alt="Logo Poliklinika Corpo">
+          <span>Poliklinika Corpo</span>
+        </a>
+      </h1>
+
+      <!-- DESKTOP MENU -->
+      <nav id="main-menu-desktop" aria-label="Hlavní navigace">
         <ul>
           <li><a href="o-nas.html">O nás</a></li>
           <li><a href="vysetreni.html">Vyšetření</a></li>
@@ -25,202 +46,184 @@
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
-    </details>
 
-    <!-- LOGO -->
-	<h1 class="logo">
-      <a href="../index.html">
-        <img src="img/logo.svg" alt="Logo Poliklinika Corpo">
-        <span>Poliklinika Corpo</span>
-      </a>
-    </h1>
+      <!-- SEARCH BAR -->
+      <form id="search-bar" action="hledani.html" method="get" role="search">
+        <label for="search-input" class="visually-hidden">Vyhledávání</label>
+        <input id="search-input" type="search" name="q" placeholder="Hledat..." required>
+        <button type="submit" aria-label="Vyhledat">
+          🔍
+        </button>
+      </form>
 
-    <!-- DESKTOP MENU -->
-    <nav id="main-menu-desktop" aria-label="Hlavní navigace">
-      <ul>
-        <li><a href="o-nas.html">O nás</a></li>
-        <li><a href="vysetreni.html">Vyšetření</a></li>
-        <li><a href="oddeleni.html">Oddělení</a></li>
-        <li><a href="lekari.html">Lékaři</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <!-- SEARCH BAR -->
-    <form id="search-bar" action="hledani.html" method="get" role="search">
-      <label for="search-input" class="visually-hidden">Vyhledávání</label>
-      <input id="search-input" type="search" name="q" placeholder="Hledat..." required>
-      <button type="submit" aria-label="Vyhledat">
-        🔍
-      </button>
-    </form>
-
-  </header>
-
-  <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
-  <nav id="breadcrumb" aria-label="Drobečková navigace">
-    <ol>
-      <li><a href="../index.html">Úvod</a></li>
-      <li><a href="rezervace.html" aria-current="page">Rezervace</a></li>
-    </ol>
-  </nav>
-
-  <!-- ===== HLAVNÍ OBSAH ===== -->
-  <main class="main-content-area">
-    <header class="page-header">
-      <h1>Rezervace</h1>
     </header>
 
-    <section class="booking-form-section">
-      <p>Vyplňte prosím níže uvedený formulář pro odeslání nezávazné žádosti o termín vyšetření. Po odeslání formuláře Vás bude kontaktovat naše recepce pro potvrzení a upřesnění termínu.</p>
+    <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
+    <nav id="breadcrumb" aria-label="Drobečková navigace">
+      <ol>
+        <li><a href="../index.html">Úvod</a></li>
+        <li><a href="rezervace.html" aria-current="page">Rezervace</a></li>
+      </ol>
+    </nav>
 
-      <form action="#" method="post" class="booking-form">
-        <fieldset>
-          <legend>1. Osobní údaje pacienta</legend>
-          <div class="form-group">
-            <label for="booking-name">Jméno a příjmení</label>
-            <input type="text" id="booking-name" name="name" required placeholder="Jan Novák">
-          </div>
-          <div class="form-group">
-            <label for="booking-birthdate">Datum narození</label>
-            <input type="date" id="booking-birthdate" name="birthdate" required>
-          </div>
-          <div class="form-group">
-            <label for="booking-phone">Telefonní číslo</label>
-            <input type="tel" id="booking-phone" name="phone" required placeholder="+420 123 456 789">
-          </div>
-          <div class="form-group">
-            <label for="booking-email">E-mail</label>
-            <input type="email" id="booking-email" name="email" required placeholder="jan.novak@email.cz">
-          </div>
-        </fieldset>
+    <!-- ===== HLAVNÍ OBSAH ===== -->
+    <main class="main-content-area">
+      <header class="page-header">
+        <h1>Rezervace</h1>
+      </header>
 
-        <fieldset>
-          <legend>2. Požadované vyšetření</legend>
-          <div class="form-group">
-            <label for="booking-department">Oddělení</label>
-            <select id="booking-department" name="department" required>
-              <option value="">-- Vyberte oddělení --</option>
-              <option value="kardiologie">Kardiologie</option>
-              <option value="dermatologie">Dermatologie</option>
-              <option value="pediatrie">Pediatrie</option>
-              <option value="ortopedie">Ortopedie</option>
-              <option value="gynekologie">Gynekologie</option>
-              <option value="neurologie">Neurologie</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="booking-doctor">Preferovaný lékař (nepovinné)</label>
-            <select id="booking-doctor" name="doctor">
-              <option value="">-- Bez preference --</option>
-              <option value="novakova">MUDr. Panam Palmer</option>
-              <option value="svoboda">MUDr. Petr Svoboda</option>
-              <option value="horova">MUDr. Eva Horová</option>
-            </select>
-          </div>
-        </fieldset>
+      <section class="booking-form-section">
+        <p>Vyplňte prosím níže uvedený formulář pro odeslání nezávazné žádosti o termín vyšetření. Po odeslání formuláře
+          Vás bude kontaktovat naše recepce pro potvrzení a upřesnění termínu.</p>
 
-        <fieldset>
-          <legend>3. Výběr termínu a času</legend>
-          <div class="form-group">
-            <label for="booking-date">Zvolte datum</label>
-            <input type="date" id="booking-date" name="date" required>
-          </div>
-          <div class="time-slot-container">
-            <p>Dostupné časy:</p>
-            <div class="time-slots">
-              <div class="time-slot">
-                <input type="radio" id="time-0800" name="booking-time" value="08:00">
-                <label for="time-0800">08:00</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-0830" name="booking-time" value="08:30">
-                <label for="time-0830">08:30</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-0900" name="booking-time" value="09:00">
-                <label for="time-0900">09:00</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-1000" name="booking-time" value="10:00">
-                <label for="time-1000">10:00</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-1030" name="booking-time" value="10:30">
-                <label for="time-1030">10:30</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-1100" name="booking-time" value="11:00">
-                <label for="time-1100">11:00</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-1300" name="booking-time" value="13:00">
-                <label for="time-1300">13:00</label>
-              </div>
-              <div class="time-slot">
-                <input type="radio" id="time-1430" name="booking-time" value="14:30">
-                <label for="time-1430">14:30</label>
+        <form action="#" method="post" class="booking-form">
+          <fieldset>
+            <legend>1. Osobní údaje pacienta</legend>
+            <div class="form-group">
+              <label for="booking-name">Jméno a příjmení</label>
+              <input type="text" id="booking-name" name="name" required placeholder="Jan Novák">
+            </div>
+            <div class="form-group">
+              <label for="booking-birthdate">Datum narození</label>
+              <input type="date" id="booking-birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-phone">Telefonní číslo</label>
+              <input type="tel" id="booking-phone" name="phone" required placeholder="+420 123 456 789">
+            </div>
+            <div class="form-group">
+              <label for="booking-email">E-mail</label>
+              <input type="email" id="booking-email" name="email" required placeholder="jan.novak@email.cz">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Požadované vyšetření</legend>
+            <div class="form-group">
+              <label for="booking-department">Oddělení</label>
+              <select id="booking-department" name="department" required>
+                <option value="">-- Vyberte oddělení --</option>
+                <option value="kardiologie">Kardiologie</option>
+                <option value="dermatologie">Dermatologie</option>
+                <option value="pediatrie">Pediatrie</option>
+                <option value="ortopedie">Ortopedie</option>
+                <option value="gynekologie">Gynekologie</option>
+                <option value="neurologie">Neurologie</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="booking-doctor">Preferovaný lékař (nepovinné)</label>
+              <select id="booking-doctor" name="doctor">
+                <option value="">-- Bez preference --</option>
+                <option value="novakova">MUDr. Panam Palmer</option>
+                <option value="svoboda">MUDr. Petr Svoboda</option>
+                <option value="horova">MUDr. Eva Horová</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Výběr termínu a času</legend>
+            <div class="form-group">
+              <label for="booking-date">Zvolte datum</label>
+              <input type="date" id="booking-date" name="date" required>
+            </div>
+            <div class="time-slot-container">
+              <p>Dostupné časy:</p>
+              <div class="time-slots">
+                <div class="time-slot">
+                  <input type="radio" id="time-0800" name="booking-time" value="08:00">
+                  <label for="time-0800">08:00</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-0830" name="booking-time" value="08:30">
+                  <label for="time-0830">08:30</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-0900" name="booking-time" value="09:00">
+                  <label for="time-0900">09:00</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-1000" name="booking-time" value="10:00">
+                  <label for="time-1000">10:00</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-1030" name="booking-time" value="10:30">
+                  <label for="time-1030">10:30</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-1100" name="booking-time" value="11:00">
+                  <label for="time-1100">11:00</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-1300" name="booking-time" value="13:00">
+                  <label for="time-1300">13:00</label>
+                </div>
+                <div class="time-slot">
+                  <input type="radio" id="time-1430" name="booking-time" value="14:30">
+                  <label for="time-1430">14:30</label>
+                </div>
               </div>
             </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Doplňující informace</legend>
+            <div class="form-group">
+              <label for="booking-notes">Poznámka (důvod návštěvy, atd.)</label>
+              <textarea id="booking-notes" name="notes" rows="4"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Souhlasím se zpracováním osobních údajů pro účely rezervace termínu.</label>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend>4. Doplňující informace</legend>
-          <div class="form-group">
-            <label for="booking-notes">Poznámka (důvod návštěvy, atd.)</label>
-            <textarea id="booking-notes" name="notes" rows="4"></textarea>
-          </div>
-        </fieldset>
+          <button type="submit" class="button">Odeslat žádost o termín</button>
+        </form>
+      </section>
 
-        <div class="form-consent">
-          <input type="checkbox" id="consent" name="consent" required>
-          <label for="consent">Souhlasím se zpracováním osobních údajů pro účely rezervace termínu.</label>
-        </div>
+    </main>
 
-        <button type="submit" class="button">Odeslat žádost o termín</button>
-      </form>
+    <!-- ===== PATIČKA ===== -->
+    <footer id="footer">
+      <section class="footer-inner">
+        <p>
+          <strong>Poliklinika Corpo</strong><br>
+          <strong>Ulice:</strong> Javorová 1286/14, Praha 10<br>
+          <strong>IČO:</strong> 28491237<br>
+          <strong>Tel:</strong>
+          <a href="tel:+420734852196">+420 734 852 196</a><br>
+          <strong>E-mail:</strong>
+          <a href="mailto:recepce@poliklinikacorpo.cz">
+            recepce@poliklinikacorpo.cz
+          </a>
+        </p>
+
+        <p>
+          <strong>Studentský projekt</strong><br>
+          Všechny texty a ilustrace byly vytvořeny pomocí AI.<br>
+          Autoři: Šulc František, Netušil David, Homolka Vít
+        </p>
+      </section>
+    </footer>
+
+    <!-- ===== SEKCE POD PATIČKOU (COPYRIGHT) ===== -->
+    <section class="copyright-section">
+      <div class="copyright-container">
+        <p class="copyright-text">
+          <time datetime="2025">©2025</time> Poliklinika Corpo, všechna práva vyhrazena.
+        </p>
+
+        <nav class="copyright-nav">
+          <a href="ochrana-osobnich-udaju.html" class="legal-link">Ochrana osobních údajů</a>
+          <a href="podminky-uzivani.html" class="legal-link">Podmínky užívání</a>
+        </nav>
+      </div>
     </section>
 
-  </main>
-
-  <!-- ===== PATIČKA ===== -->
-  <footer id="footer">
-    <section class="footer-inner">
-      <p>
-        <strong>Poliklinika Corpo</strong><br>
-        <strong>Ulice:</strong> Javorová 1286/14, Praha 10<br>
-        <strong>IČO:</strong> 28491237<br>
-        <strong>Tel:</strong>
-        <a href="tel:+420734852196">+420 734 852 196</a><br>
-        <strong>E-mail:</strong>
-        <a href="mailto:recepce@poliklinikacorpo.cz">
-          recepce@poliklinikacorpo.cz
-        </a>
-      </p>
-
-      <p>
-        <strong>Studentský projekt</strong><br>
-        Všechny texty a ilustrace byly vytvořeny pomocí AI.<br>
-        Autoři: Šulc František, Netušil David, Homolka Vít
-      </p>
-    </section>
-  </footer>
-
-  <!-- ===== SEKCE POD PATIČKOU (COPYRIGHT) ===== -->
-  <section class="copyright-section">
-    <div class="copyright-container">
-      <p class="copyright-text">
-        <time datetime="2025">©2025</time> Poliklinika Corpo, všechna práva vyhrazena.
-      </p>
-
-      <nav class="copyright-nav">
-        <a href="ochrana-osobnich-udaju.html" class="legal-link">Ochrana osobních údajů</a>
-        <a href="podminky-uzivani.html" class="legal-link">Podmínky užívání</a>
-      </nav>
-    </div>
-  </section>
-
-</div>
+  </div>
 </body>
+
 </html>

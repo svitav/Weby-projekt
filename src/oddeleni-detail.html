@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,35 @@
 </head>
 
 <body>
-<div id="wrapper">
+  <div id="wrapper">
 
-  <!-- ===== HEADER ===== -->
-  <header id="navigation">
+    <!-- ===== HEADER ===== -->
+    <header id="navigation">
 
-    <!-- MOBILE MENU (burger) -->
-    <details class="menu-toggle">
-      <summary class="header-icon" aria-label="Otevřít hlavní menu">☰</summary>
-      <nav class="mobile-menu" aria-label="Hlavní navigace – mobil">
+      <!-- MOBILE MENU (burger) -->
+      <details class="menu-toggle">
+        <summary class="header-icon" aria-label="Otevřít hlavní menu">☰</summary>
+        <nav class="mobile-menu" aria-label="Hlavní navigace – mobil">
+          <ul>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="vysetreni.html">Vyšetření</a></li>
+            <li><a href="oddeleni.html">Oddělení</a></li>
+            <li><a href="lekari.html">Lékaři</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <!-- LOGO -->
+      <h1 class="logo">
+        <a href="../index.html">
+          <img src="img/logo.svg" alt="Logo Poliklinika Corpo">
+          <span>Poliklinika Corpo</span>
+        </a>
+      </h1>
+
+      <!-- DESKTOP MENU -->
+      <nav id="main-menu-desktop" aria-label="Hlavní navigace">
         <ul>
           <li><a href="o-nas.html">O nás</a></li>
           <li><a href="vysetreni.html">Vyšetření</a></li>
@@ -25,137 +46,126 @@
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
-    </details>
 
-    <!-- LOGO -->
-	<h1 class="logo">
-      <a href="../index.html">
-        <img src="img/logo.svg" alt="Logo Poliklinika Corpo">
-        <span>Poliklinika Corpo</span>
-      </a>
-    </h1>
+      <!-- SEARCH BAR -->
+      <form id="search-bar" action="hledani.html" method="get" role="search">
+        <label for="search-input" class="visually-hidden">Vyhledávání</label>
+        <input id="search-input" type="search" name="q" placeholder="Hledat..." required>
+        <button type="submit" aria-label="Vyhledat">
+          🔍
+        </button>
+      </form>
 
-    <!-- DESKTOP MENU -->
-    <nav id="main-menu-desktop" aria-label="Hlavní navigace">
-      <ul>
-        <li><a href="o-nas.html">O nás</a></li>
-        <li><a href="vysetreni.html">Vyšetření</a></li>
-        <li><a href="oddeleni.html">Oddělení</a></li>
-        <li><a href="lekari.html">Lékaři</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <!-- SEARCH BAR -->
-    <form id="search-bar" action="hledani.html" method="get" role="search">
-      <label for="search-input" class="visually-hidden">Vyhledávání</label>
-      <input id="search-input" type="search" name="q" placeholder="Hledat..." required>
-      <button type="submit" aria-label="Vyhledat">
-        🔍
-      </button>
-    </form>
-
-  </header>
-
-  <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
-  <nav id="breadcrumb" aria-label="Drobečková navigace">
-    <ol>
-      <li><a href="../index.html">Úvod</a></li>
-      <li><a href="oddeleni.html">Oddělení</a></li>
-      <li><a href="oddeleni-detail.html" aria-current="page">Kardiologie</a></li>
-    </ol>
-  </nav>
-
-  <!-- ===== HLAVNÍ OBSAH ===== -->
-  <main class="main-content-area">
-    <header class="page-header">
-      <h1>Kardiologie</h1>
     </header>
 
-    <section class="department-detail">
-      <p>Vítejte na stránce našeho kardiologického oddělení. Zaměřujeme se na komplexní diagnostiku, léčbu a prevenci onemocnění srdce a cév. Náš tým zkušených lékařů a sester využívá nejmodernější technologie k zajištění té nejlepší péče pro vaše srdce.</p>
+    <!-- ===== DROBEČKOVÁ NAVIGACE ===== -->
+    <nav id="breadcrumb" aria-label="Drobečková navigace">
+      <ol>
+        <li><a href="../index.html">Úvod</a></li>
+        <li><a href="oddeleni.html">Oddělení</a></li>
+        <li><a href="oddeleni-detail.html" aria-current="page">Kardiologie</a></li>
+      </ol>
+    </nav>
 
-      <h2>Spektrum poskytované péče</h2>
-      <ul>
-        <li><strong>Diagnostika a léčba ischemické choroby srdeční:</strong> Včetně péče o pacienty po infarktu myokardu.</li>
-        <li><strong>Léčba arteriální hypertenze (vysokého krevního tlaku):</strong> Nastavení a optimalizace medikamentózní léčby.</li>
-        <li><strong>Poruchy srdečního rytmu (arytmie):</strong> Diagnostika pomocí EKG a Holterova monitorování.</li>
-        <li><strong>Srdeční selhání:</strong> Komplexní péče o pacienty s chronickým srdečním selháním.</li>
-        <li><strong>Echokardiografie (ultrazvuk srdce):</strong> Detailní zobrazení srdečních struktur a jejich funkce.</li>
-        <li><strong>Zátěžové testy:</strong> Sledování EKG a krevního tlaku při fyzické zátěži.</li>
-        <li><strong>Preventivní kardiologie:</strong> Posouzení kardiovaskulárního rizika a doporučení pro zdravý životní styl.</li>
-      </ul>
+    <!-- ===== HLAVNÍ OBSAH ===== -->
+    <main class="main-content-area">
+      <header class="page-header">
+        <h1>Kardiologie</h1>
+      </header>
 
-      <h2>Náš tým</h2>
-      <p>O vaši péči se stará tým specialistů pod vedením hlavní lékařky MUDr. Jany Novákové. Všichni naši lékaři mají dlouholeté zkušenosti v oboru a pravidelně se účastní odborných kongresů a školení. <a href="lekari.html">Seznamte se s našimi lékaři</a>.</p>
+      <section class="department-detail">
+        <p>Vítejte na stránce našeho kardiologického oddělení. Zaměřujeme se na komplexní diagnostiku, léčbu a prevenci
+          onemocnění srdce a cév. Náš tým zkušených lékařů a sester využívá nejmodernější technologie k zajištění té
+          nejlepší péče pro vaše srdce.</p>
 
-      <h2>Ordinační hodiny</h2>
-      <table class="office-hours">
-        <tbody>
-          <tr>
-            <th>Pondělí</th>
-            <td>7:30 - 16:00</td>
-          </tr>
-          <tr>
-            <th>Úterý</th>
-            <td>7:30 - 16:00</td>
-          </tr>
-          <tr>
-            <th>Středa</th>
-            <td>7:30 - 18:00</td>
-          </tr>
-          <tr>
-            <th>Čtvrtek</th>
-            <td>7:30 - 16:00</td>
-          </tr>
-          <tr>
-            <th>Pátek</th>
-            <td>7:30 - 14:00</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>Na vyšetření je nutné se předem objednat. Akutní případy ošetřujeme po telefonické domluvě.</p>
+        <h2>Spektrum poskytované péče</h2>
+        <ul>
+          <li><strong>Diagnostika a léčba ischemické choroby srdeční:</strong> Včetně péče o pacienty po infarktu
+            myokardu.</li>
+          <li><strong>Léčba arteriální hypertenze (vysokého krevního tlaku):</strong> Nastavení a optimalizace
+            medikamentózní léčby.</li>
+          <li><strong>Poruchy srdečního rytmu (arytmie):</strong> Diagnostika pomocí EKG a Holterova monitorování.</li>
+          <li><strong>Srdeční selhání:</strong> Komplexní péče o pacienty s chronickým srdečním selháním.</li>
+          <li><strong>Echokardiografie (ultrazvuk srdce):</strong> Detailní zobrazení srdečních struktur a jejich
+            funkce.</li>
+          <li><strong>Zátěžové testy:</strong> Sledování EKG a krevního tlaku při fyzické zátěži.</li>
+          <li><strong>Preventivní kardiologie:</strong> Posouzení kardiovaskulárního rizika a doporučení pro zdravý
+            životní styl.</li>
+        </ul>
+
+        <h2>Náš tým</h2>
+        <p>O vaši péči se stará tým specialistů pod vedením hlavní lékařky MUDr. Jany Novákové. Všichni naši lékaři mají
+          dlouholeté zkušenosti v oboru a pravidelně se účastní odborných kongresů a školení. <a
+            href="lekari.html">Seznamte se s našimi lékaři</a>.</p>
+
+        <h2>Ordinační hodiny</h2>
+        <table class="office-hours">
+          <tbody>
+            <tr>
+              <th>Pondělí</th>
+              <td>7:30 - 16:00</td>
+            </tr>
+            <tr>
+              <th>Úterý</th>
+              <td>7:30 - 16:00</td>
+            </tr>
+            <tr>
+              <th>Středa</th>
+              <td>7:30 - 18:00</td>
+            </tr>
+            <tr>
+              <th>Čtvrtek</th>
+              <td>7:30 - 16:00</td>
+            </tr>
+            <tr>
+              <th>Pátek</th>
+              <td>7:30 - 14:00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Na vyšetření je nutné se předem objednat. Akutní případy ošetřujeme po telefonické domluvě.</p>
+      </section>
+
+    </main>
+
+    <!-- ===== PATIČKA ===== -->
+    <footer id="footer">
+      <section class="footer-inner">
+        <p>
+          <strong>Poliklinika Corpo</strong><br>
+          <strong>Ulice:</strong> Javorová 1286/14, Praha 10<br>
+          <strong>IČO:</strong> 28491237<br>
+          <strong>Tel:</strong>
+          <a href="tel:+420734852196">+420 734 852 196</a><br>
+          <strong>E-mail:</strong>
+          <a href="mailto:recepce@poliklinikacorpo.cz">
+            recepce@poliklinikacorpo.cz
+          </a>
+        </p>
+
+        <p>
+          <strong>Studentský projekt</strong><br>
+          Všechny texty a ilustrace byly vytvořeny pomocí AI.<br>
+          Autoři: Šulc František, Netušil David, Homolka Vít
+        </p>
+      </section>
+    </footer>
+
+    <!-- ===== SEKCE POD PATIČKOU (COPYRIGHT) ===== -->
+    <section class="copyright-section">
+      <div class="copyright-container">
+        <p class="copyright-text">
+          <time datetime="2025">©2025</time> Poliklinika Corpo, všechna práva vyhrazena.
+        </p>
+
+        <nav class="copyright-nav">
+          <a href="ochrana-osobnich-udaju.html" class="legal-link">Ochrana osobních údajů</a>
+          <a href="podminky-uzivani.html" class="legal-link">Podmínky užívání</a>
+        </nav>
+      </div>
     </section>
 
-  </main>
-
-  <!-- ===== PATIČKA ===== -->
-  <footer id="footer">
-    <section class="footer-inner">
-      <p>
-        <strong>Poliklinika Corpo</strong><br>
-        <strong>Ulice:</strong> Javorová 1286/14, Praha 10<br>
-        <strong>IČO:</strong> 28491237<br>
-        <strong>Tel:</strong>
-        <a href="tel:+420734852196">+420 734 852 196</a><br>
-        <strong>E-mail:</strong>
-        <a href="mailto:recepce@poliklinikacorpo.cz">
-          recepce@poliklinikacorpo.cz
-        </a>
-      </p>
-
-      <p>
-        <strong>Studentský projekt</strong><br>
-        Všechny texty a ilustrace byly vytvořeny pomocí AI.<br>
-        Autoři: Šulc František, Netušil David, Homolka Vít
-      </p>
-    </section>
-  </footer>
-
-  <!-- ===== SEKCE POD PATIČKOU (COPYRIGHT) ===== -->
-  <section class="copyright-section">
-    <div class="copyright-container">
-      <p class="copyright-text">
-        <time datetime="2025">©2025</time> Poliklinika Corpo, všechna práva vyhrazena.
-      </p>
-
-      <nav class="copyright-nav">
-        <a href="ochrana-osobnich-udaju.html" class="legal-link">Ochrana osobních údajů</a>
-        <a href="podminky-uzivani.html" class="legal-link">Podmínky užívání</a>
-      </nav>
-    </div>
-  </section>
-
-</div>
+  </div>
 </body>
+
 </html>

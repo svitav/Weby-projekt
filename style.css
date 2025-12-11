@@ -15,7 +15,7 @@
   --color-breadcrumb-bg: #f5f7fa;
   --color-breadcrumb-text: #555555;
 
-  --color-accent: #1f7acb;
+  --color-accent: #1f79c9; /*4.53:1 nejnižší kontrast, plní WCAG 2.0 AA*/
 
   --space-xs: 0.25rem;
   --space-s: 0.5rem;
@@ -51,7 +51,7 @@ a:focus {
   text-decoration: underline;
 }
 
-.visually-hidden {
+.visually-hidden { /*skrytí textu pro čtečky*/
   position: absolute;
   width: 1px;
   height: 1px;
@@ -60,6 +60,29 @@ a:focus {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+/* Skip link - skrytý, viditelný při focus */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: var(--space-m);
+  top: var(--space-m);
+  width: auto;
+  height: auto;
+  padding: var(--space-s) var(--space-m);
+  background: var(--color-accent);
+  color: var(--color-header-text);
+  border-radius: var(--space-xs);
+  z-index: 9999;
+  font-size: var(--font-size-s);
 }
 
 /* Wrapper – obalení obsahu stránky */
@@ -154,7 +177,7 @@ a:focus {
 }
 
 .mobile-menu a {
-  color: #ffffff;
+  color: var(--color-bg);
   font-size: var(--font-size-s);
 }
 
@@ -183,7 +206,7 @@ a:focus {
   padding: 0.35rem 0.5rem;
   border: 1px solid #3a6185;
   border-radius: 0.25rem;
-  background: #ffffff;
+  background: var(--color-bg);
   color: #000000;
   width: 100%;
 }
@@ -304,7 +327,7 @@ a:focus {
 }
 
 .absence-card {
-  background: #ffffff;
+  background: var(--color-bg);
   border-radius: 0.75rem;
   padding: var(--space-m);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -578,7 +601,7 @@ a:focus {
   font-weight: 600;
   align-self: flex-start;
   background: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-bg);
   padding: var(--space-s) var(--space-m);
   border-radius: 0.25rem;
   text-decoration: none;
@@ -673,7 +696,7 @@ a:focus {
   font-size: var(--font-size-base);
   font-weight: 600;
   background: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-bg);
   padding: var(--space-s) var(--space-l);
   border-radius: 0.25rem;
   text-decoration: none;
@@ -784,7 +807,7 @@ a:focus {
 
 .time-slot input[type="radio"]:checked + label {
   background-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-bg);
   border-color: var(--color-accent);
   font-weight: 600;
 }
@@ -808,7 +831,7 @@ a:focus {
   font-size: var(--font-size-base);
   font-weight: 600;
   background: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-bg);
   padding: var(--space-s) var(--space-l);
   border-radius: 0.25rem;
   text-decoration: none;
